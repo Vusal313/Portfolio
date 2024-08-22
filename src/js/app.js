@@ -1,65 +1,99 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Yükleme animasyonu
-    const loader = document.getElementById('loader');
-    setTimeout(() => {
-        loader.style.display = 'none';
-    }, 500);
+// Menü geçişi
 
-    // Menü geçişi
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navbar = document.querySelector('.navbar');
-    
-    menuToggle.addEventListener('click', () => {
-        navbar.classList.toggle('active');
+const menuToggle = document.querySelector(".menu-toggle");
+const navbar = document.querySelector(".navbar");
+
+// Menü toggle'ı kontrol et
+if (menuToggle && navbar) {
+    menuToggle.addEventListener("click", () => {
+        navbar.classList.toggle("active");
     });
+}
 
-    // Navbar'da yumuşak geçiş
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-            navbar.classList.remove('active');
+// Navbar'da yumuşak geçiş
+document.querySelectorAll("nav a").forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
         });
+        navbar.classList.remove("active");
     });
-
-    // Fare takip noktası
-    document.addEventListener("mousemove", function (event) {
-        const cursorDot = document.querySelector(".cursor-dot");
-        const mouseX = event.clientX; // Fare imleci X koordinatı
-        const mouseY = event.clientY; // Fare imleci Y koordinatı
-    
-        // İmleci tam ucuna yerleştirmek için offset uygula
-        const offsetX = 0; // Noktayı X ekseninde ofsetle (0)
-        const offsetY = 0; // Noktayı Y ekseninde ofsetle (0)
-    
-        cursorDot.style.left = `${mouseX + offsetX}px`; // Noktanın sol pozisyonu
-        cursorDot.style.top = `${mouseY + offsetY}px`; // Noktanın üst pozisyonu
-    });
-    
 });
 
-document.getElementById("phone-link").addEventListener("click", function(event) {
-    // Telefon bağlantısını açar
+// Telefon bağlantısını açar
+document.getElementById("phone-link").addEventListener("click", function (e) {
+    e.preventDefault();
     window.location.href = "tel:+994702148307";
 });
 
-document.getElementById("whatsapp-link").addEventListener("click", function(event) {
-    // WhatsApp bağlantısını açar
+// WhatsApp bağlantısını açar
+document.querySelector(".whatsapp-icon").addEventListener("click", function () {
     window.open("https://wa.me/994702148307", "_blank");
 });
 
-document.getElementById("email-link").addEventListener("click", function(event) {
-    // E-posta uygulamasını açar
+// E-posta uygulamasını açar
+document.getElementById("email-link").addEventListener("click", function (e) {
+    e.preventDefault();
     window.location.href = "mailto:muradovvusal565@gmail.com";
-    // Uyarı mesajı (isteğe bağlı)
-    alert("E-posta uygulamanız açılacak: muradovvusal565@gmail.com");
 });
 
-document.getElementById("phone-link").addEventListener("click", function(event) {
-    // Telefon uygulamasını açar
-    window.location.href = "tel:+994702148307";
-    // Uyarı mesajı (isteğe bağlı)
-    alert("Telefon uygulamanız açılacak: +994 70 214 83 07");
+// LinkedIn bağlantısını açar
+document.querySelector(".linkedin-icon").addEventListener("click", function () {
+    window.open("https://www.linkedin.com/in/muradovvusal", "_blank");
+});
+
+// GitHub bağlantısını açar
+document.querySelector(".github-icon").addEventListener("click", function () {
+    window.open("https://github.com/muradovvusal", "_blank");
+});
+
+// Fare takip noktası için değişken
+const cursorDot = document.querySelector(".cursor-dot");
+
+// Hareketin akıcılığını artırmak için değişkenler
+let mouseX = 0;
+let mouseY = 0;
+
+// Fare hareketi dinleyicisi
+document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+// Fare noktasının pozisyonunu güncellemek için fonksiyon
+function updateCursor() {
+    cursorDot.style.left = `${mouseX}px`;
+    cursorDot.style.top = `${mouseY}px`;
+    requestAnimationFrame(updateCursor);
+}
+
+// İlk güncellemeyi başlat
+updateCursor();
+
+// Sayfa yüklendiğinde yükleme animasyonunu gizleme
+window.addEventListener('load', () => {
+    document.getElementById('loader').style.display = 'none';
+});
+
+
+// Menü linklerine tıklama animasyonu
+document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.navbar').classList.remove('active');
+    });
+});
+
+
+
+// Yumuşak geçişler için JavaScript
+document.querySelectorAll('.navbar a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        window.scrollTo({
+            top: target.offsetTop,
+            behavior: 'smooth'
+        });
+    });
 });
