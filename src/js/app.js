@@ -70,7 +70,7 @@ function updateCursor() {
 
 // İlk güncellemeyi başlat
 updateCursor();
-
+    
 // Sayfa yüklendiğinde yükleme animasyonunu gizleme
 window.addEventListener('load', () => {
     document.getElementById('loader').style.display = 'none';
