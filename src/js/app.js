@@ -40,12 +40,12 @@ document.getElementById("email-link").addEventListener("click", function (e) {
 
 // LinkedIn bağlantısını açar
 document.querySelector(".linkedin-icon").addEventListener("click", function () {
-    window.open("https://www.linkedin.com/in/muradovvusal", "_blank");
+    window.open("https://www.linkedin.com/in/v%C3%BCsal-muradov-22a7862b7/", "_blank");
 });
 
 // GitHub bağlantısını açar
 document.querySelector(".github-icon").addEventListener("click", function () {
-    window.open("https://github.com/muradovvusal", "_blank");
+    window.open("https://github.com/Vusal313", "_blank");
 });
 
 // Fare takip noktası için değişken
