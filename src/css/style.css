@@ -7,6 +7,20 @@ body {
   scroll-behavior: smooth;
 }
 
+.main__section {
+  height: 100vh;
+}
+
+
+
+.canvasFluid {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
 /* Konteyner */
 .container {
   width: 80%;
@@ -271,26 +285,15 @@ footer a:hover {
 
 /* Fare takip noktası */
 .cursor-dot {
-  position: absolute;
+  position: fixed;
   width: 12px;
   height: 12px;
   background-color: red; 
   border-radius: 50%;
   pointer-events: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 4000;
   transform: translate(-100%, -100%);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-/* Hover etkisi için stil */
-.cursor-dot:hover {
-  transform: translate(-100%, -100%) scale(1.5); 
-  background: radial-gradient(circle, red, #ffffff);
-  width: 20px; 
-  height: 20px; 
+  transition: transform 0.3s ease;
 }
 
 /* Menü Toggle için stil */
