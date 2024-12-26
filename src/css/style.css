@@ -63,7 +63,7 @@ nav {
 }
 
 .navbar a:hover {
-  color: red;
+  color: #21ebff;
 }
 
 /* Mobil menü */
@@ -87,7 +87,7 @@ nav {
 .whatsapp-icon i:hover,
 .linkedin-icon i:hover,
 .github-icon i:hover {
-  color: red;
+  color: #21ebff;
 }
 
 /* Header */
@@ -109,7 +109,7 @@ nav {
   transition: 0.3s ease;
 }
 .profile-pic img:hover {
-  border: 3px solid red;
+  border: 3px solid #21ebff;
 }
 .intro h1,
 .intro p {
@@ -136,7 +136,7 @@ nav {
     border-color: transparent;
   }
   50% {
-    border-color: red;
+    border-color: #21ebff;
   }
 }
 
@@ -174,7 +174,7 @@ nav {
   transition: 0.3s ease;
 }
 .about-content:hover{
-  border: 1px solid red; 
+  border: 1px solid #21ebff; 
 
 }
 
@@ -233,13 +233,14 @@ nav {
   justify-content: center;
   border-radius: 50px;
   font-size: 20px;
+  gap: 25px;
 }
 
 /* Kart hover efektleri */
 .skill-card:hover,
 .project-card:hover {
   transform: scale(1.01);
-  box-shadow:red 0px 2px 8px;
+  box-shadow:#21ebff 0px 2px 8px;
   background: linear-gradient(45deg, rgb(0, 0, 0), #1f1f1f) padding-box; 
 }
 
@@ -274,7 +275,7 @@ footer {
 
 }
 footer a {
-  color: red;
+  color: #21ebff;
   text-decoration: none;
 }
 
@@ -288,7 +289,7 @@ footer a:hover {
   position: fixed;
   width: 12px;
   height: 12px;
-  background-color: red; 
+  background-color: #21ebff; 
   border-radius: 50%;
   pointer-events: none;
   z-index: 4000;
@@ -305,7 +306,7 @@ footer a:hover {
     color: #ffff;
 }
 #contact a{
-    color:red;
+    color:#21ebff;
     text-decoration: none;
 }
 /* Mobil görünümde menü toggle'ı göster */
