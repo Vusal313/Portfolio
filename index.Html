@@ -12,6 +12,9 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> Vusal Muradov</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="./src/img/vecteezy_silver-alphabet-letter-and-number_43543413.png">
 
     <link rel="stylesheet" href="./src/css/style.css" />
@@ -19,63 +22,42 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
   </head>
   <body>
-    <section class="main__section main__section-list" id="s">
+    <section class="main__section main__section-list">
       <canvas class="canvasFluid"></canvas>
   
     <!-- Ana menü -->
     <nav>
       <div class="container">
-        
+        <a href="#home" class="nav-logo">Vusal Muradov</a>
+        <div class="nav-menu">
+            <ul class="navbar">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="social-links">
+                    <a href="https://wa.me/994702148307" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/in/v%C3%BCsal-muradov-22a7862b7/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Vusal313" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="theme-switcher">
+                  <i class="fas fa-sun"></i>
+                  <i class="fas fa-moon"></i>
+                </div>
+            </div>
+        </div>
         <div class="menu-toggle">&#9776;</div>
-        <ul class="navbar">
-          <li><a href="#about">Home</a></li>
-          <li><a href="#skills">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <!-- Sosyal medya bağlantıları -->
-          <li>
-            <a
-              href="https://wa.me/994702148307"
-              target="_blank"
-              class="whatsapp-icon"
-              ><i class="fab fa-whatsapp"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/v%C3%BCsal-muradov-22a7862b7/"
-              target="_blank"
-              class="linkedin-icon"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/Vusal313"
-              target="_blank"
-              class="github-icon"
-              ><i class="fab fa-github"></i
-            ></a>
-          </li>
-        </ul>
       </div>
     </nav>
 
     <!-- Profil ve tanıtım -->
-    <header>
+    <header id="home">
       <div class="container header-content">
-        <div class="profile-pic">
-          <img
-            src="./src/img/WhatsApp Image 2024-12-16 at 22.55.40_3e82f890.jpg"
-            alt="Muradov Vusal"
-          />
-        </div>
         <div class="intro">
           <h1 id="intro-name">Muradov Vusal</h1>
           <p id="intro-title">Front-end Developer</p>
@@ -84,55 +66,49 @@
     </header>
 
     <!-- Hakkında bölümü -->
-    <section id="about">
+    <section id="about" class="reveal">
       <div class="container">
-        <h2>ABOUT</h2>
+        <h2>About Me</h2>
         <div class="about-content">
-          <p>
-            Muradov Vusal is a front end living in Baku, Azerbaijan is a
-            developer. Well-known teaching like Digital Dot and Garage Academy
-            received professional education in the centers. Vusal, HTML5, CSS3,
-            Modern like Bootstrap, JavaScript, React, Figma and Photopea has a
-            perfect knowledge of technologies and design tools. He himself
-            constantly tries to improve his knowledge and is open to
-            innovations. He knows English at a basic level, and this is his
-            international enables him to participate in projects. In his
-            professional activity Vüsal, which gives importance to quality and
-            perfection, both in its projects to achieve the best results both
-            aesthetically and functionally is working He has deep knowledge in
-            web design and development and intends to continuously develop
-            himself in this field. Vusal is also known for his creative approach
-            and attention to detail is recognized. To be one of the exemplary
-            specialists in this field in Azerbaijan to constantly acquire new
-            knowledge and apply them aims.
-          </p>
+          <div class="profile-pic">
+            <img
+              src="./src/img/WhatsApp Image 2024-12-16 at 22.55.40_3e82f890.jpg"
+              alt="Muradov Vusal"
+            />
+          </div>
+          <div class="about-text">
+            <h3>I'm Vusal, a Front-end Developer based in Baku.</h3>
+            <p>
+              I am a passionate developer with a strong foundation in modern web technologies, having completed professional training at leading centers like Digital Dot and Garage Academy. My expertise lies in creating high-quality, visually appealing, and functional web applications using tools like HTML5, CSS3, JavaScript, and React.
+            </p>
+            <p>
+              I am a creative problem-solver with a keen eye for detail and a constant drive to learn and embrace new technologies. I am excited to contribute to innovative projects and collaborate with creative teams to build exceptional digital experiences.
+            </p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Beceri bölümü -->
-    <section id="skills">
+    <section id="skills" class="reveal">
       <div class="container">
         <h2>MY SKILLS</h2>
         <div class="skill-cards">
-          <div class="skill-card"><i class="fab fa-html5"></i> HTML5</div>
-          <div class="skill-card"><i class="fab fa-css3-alt"></i> CSS3</div>
-          <div class="skill-card"><i class="fab fa-sass"></i> SASS</div>
-          <div class="skill-card"><i class="fab fa-sass icon"></i> SCSS</div>
-         
-          <div class="skill-card">
-            <i class="fab fa-bootstrap"></i> Bootstrap
-          </div>
-          <div class="skill-card"><i class="fab fa-js"></i> JavaScript</div>
-          <div class="skill-card"><i class="fab fa-react"></i> React</div>
-          <div class="skill-card"><i class="fab fa-figma"></i> Figma</div>
-          <div class="skill-card"><i class="fab fa-photopea"></i> Photopea</div>
+          <div class="skill-card"><i class="fab fa-html5"></i><span>HTML5</span></div>
+          <div class="skill-card"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+          <div class="skill-card"><i class="fab fa-js"></i><span>JavaScript</span></div>
+          <div class="skill-card"><i class="fab fa-react"></i><span>React</span></div>
+          <div class="skill-card"><i class="fab fa-bootstrap"></i><span>Bootstrap</span></div>
+          <div class="skill-card"><i class="fab fa-sass"></i><span>SASS</span></div>
+          <div class="skill-card"><i class="fab fa-figma"></i><span>Figma</span></div>
+          <div class="skill-card"><i class="fas fa-paint-brush"></i><span>Photopea</span></div>
         </div>
       </div>
     </section>
 
     <!-- Projeler bölüm -->
-    <section id="projects">
+    <section id="projects" class="reveal">
       <div class="container">
         <h2>MY PROJECTS</h2>
         <div class="project-cards">
@@ -198,39 +174,41 @@
     </section>
 
     <!-- İletişim bölümü -->
-    <section id="contact">
+    <section id="contact" class="reveal">
       <div class="container">
-        <h2>CONTACT</h2>
-        <p>
-          <i class="fas fa-envelope"></i>
-          <a href="mailto:muradovvusal565@gmail.com" id="email-link"
-            >muradovvusal565@gmail.com</a
-          >
-        </p>
-        <p>
-          <i class="fas fa-phone"></i>
-          <a href="tel:+994702148307" id="phone-link">+994 70 214 83 07</a>
-        </p>
+        <h2>Get In Touch</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Let's talk!</h3>
+                <p>If you have any questions or want to collaborate, feel free to reach out. I'm always open to discussing new projects and creative ideas.</p>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:muradovvusal565@gmail.com">muradovvusal565@gmail.com</a>
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+994702148307">+994 70 214 83 07</a>
+                </p>
+            </div>
+            <form class="contact-form" name="contact" data-netlify="true">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </div>
       </div>
     </section>
-    <div class="cursor-dot"></div>
+    
     <!-- Footer -->
     <footer>
       <div class="container">
-        <p>&copy; 2024 Muradov Vusal. Bütün hüquqlar qorunur.</p>
-        <p class="contact-info">
-          <i class="fas fa-envelope"></i>
-          <a href="mailto:muradovvusal565@gmail.com" id="email-link"
-            >muradovvusal565@gmail.com</a
-          >
-          |
-          <i class="fas fa-phone"></i>
-          <a href="tel:+994702148307" id="phone-link">+994 70 214 83 07</a>
-        </p>
+        <p>&copy; 2025 Muradov Vusal. Bütün hüquqlar qorunur.</p>
       </div>
     </footer>
   </section>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
     <script src="./src/js/app.js"></script>
   </body>
 </html>

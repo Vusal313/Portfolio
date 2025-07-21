@@ -1,103 +1,61 @@
 // Menü geçişi
 
 const menuToggle = document.querySelector(".menu-toggle");
-const navbar = document.querySelector(".navbar");
+const navMenu = document.querySelector(".nav-menu");
 
-// Menü toggle'ı kontrol et
-if (menuToggle && navbar) {
+if (menuToggle && navMenu) {
     menuToggle.addEventListener("click", () => {
-        navbar.classList.toggle("active");
+        navMenu.classList.toggle("active");
     });
 }
 
-// Navbar'da yumuşak geçiş
 document.querySelectorAll("nav a").forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-        });
-        navbar.classList.remove("active");
+        const targetId = this.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: "smooth",
+            });
+        }
+        if (navMenu.classList.contains("active")) {
+            navMenu.classList.remove("active");
+        }
     });
 });
 
-// Telefon bağlantısını açar
-document.getElementById("phone-link").addEventListener("click", function (e) {
-    e.preventDefault();
-    window.location.href = "tel:+994702148307";
+window.addEventListener('scroll', () => {
+    const reveals = document.querySelectorAll('.reveal');
+    for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const revealTop = reveals[i].getBoundingClientRect().top;
+        const revealPoint = 150;
+
+        if (revealTop < windowHeight - revealPoint) {
+            reveals[i].classList.add('active');
+        } else {
+            reveals[i].classList.remove('active');
+        }
+    }
 });
 
-// WhatsApp bağlantısını açar
-document.querySelector(".whatsapp-icon").addEventListener("click", function () {
-    window.open("https://wa.me/994702148307", "_blank");
+const themeSwitcher = document.querySelector('.theme-switcher');
+const body = document.body;
+
+themeSwitcher.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark-mode');
+    } else {
+        localStorage.removeItem('theme');
+    }
 });
 
-// E-posta uygulamasını açar
-document.getElementById("email-link").addEventListener("click", function (e) {
-    e.preventDefault();
-    window.location.href = "mailto:muradovvusal565@gmail.com";
-});
-
-// LinkedIn bağlantısını açar
-document.querySelector(".linkedin-icon").addEventListener("click", function () {
-    window.open("https://www.linkedin.com/in/v%C3%BCsal-muradov-22a7862b7/", "_blank");
-});
-
-// GitHub bağlantısını açar
-document.querySelector(".github-icon").addEventListener("click", function () {
-    window.open("https://github.com/Vusal313", "_blank");
-});
-
-// Fare takip noktası için değişken
-const cursorDot = document.querySelector(".cursor-dot");
-
-// Hareketin akıcılığını artırmak için değişkenler
-// let mouseX = 0;
-// let mouseY = 0;
-
-// Fare hareketi dinleyicisi
-document.addEventListener("mousemove", (e) => {
-    cursorDot.style.left = `${e.clientX}px`;
-    cursorDot.style.top = `${e.clientY}px`;
-    // mouseX = e.clientX;
-    // mouseY = e.clientY;
-});
-
-// Fare noktasının pozisyonunu güncellemek için fonksiyon
-// function updateCursor() {
-    // cursorDot.style.left = `${mouseX}px`;
-    // cursorDot.style.top = `${mouseY}px`;
-    // requestAnimationFrame(updateCursor);
-// }
-
-// İlk güncellemeyi başlat
-// updateCursor();
-    
-// Sayfa yüklendiğinde yükleme animasyonunu gizleme
-// window.addEventListener('load', () => {
-//     document.getElementById('loader').style.display = 'none';
-// });
-
-
-// Menü linklerine tıklama animasyonu
-document.querySelectorAll('.navbar a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.querySelector('.navbar').classList.remove('active');
-    });
-});
-
-
-
-// Yumuşak geçişler için JavaScript
-document.querySelectorAll('.navbar a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        window.scrollTo({
-            top: target.offsetTop,
-            behavior: 'smooth'
-        });
-    });
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('theme') === 'dark-mode') {
+        body.classList.add('dark-mode');
+    }
 });
 
 'use strict';
