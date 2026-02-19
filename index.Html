@@ -1,214 +1,437 @@
 <!DOCTYPE html>
-<html lang="az">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Muradov Vusal - Front-end Developer Portfolio"
-    />
-    <meta
-      name="keywords"
-      content="Muradov Vusal, Front-end Developer, HTML5, CSS3, Bootstrap, JavaScript, React, Figma, Photopea"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Vusal Muradov</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="./src/img/vecteezy_silver-alphabet-letter-and-number_43543413.png">
 
-    <link rel="stylesheet" href="./src/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-  </head>
-  <body>
-    <section class="main__section main__section-list">
-      <canvas class="canvasFluid"></canvas>
-  
+<html lang="az">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="Muradov Vusal - Front-end Developer Portfolio" name="description" />
+  <meta content="Muradov Vusal, Front-end Developer, HTML5, CSS3, Bootstrap, JavaScript, React, Figma, Photopea"
+    name="keywords" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="Vusal Muradov — Front-end Developer" property="og:title" />
+  <meta content="Modern, responsive and interactive web interfaces — portfolio of Muradov Vusal."
+    property="og:description" />
+  <meta content="website" property="og:type" />
+  <meta content="./src/img/WhatsApp Image 2024-12-16 at 22.55.40_3e82f890.jpg" property="og:image" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta content="#071223" name="theme-color" />
+  <title> Vusal Muradov</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="./src/img/vecteezy_silver-alphabet-letter-and-number_43543413.png" rel="icon" type="image/png" />
+  <link href="./src/css/style.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <noscript>
+    <style>
+      #pageLoader {
+        display: none !important;
+      }
+    </style>
+  </noscript>
+  <script
+    type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Vusal Muradov", "jobTitle": "Front-end Developer", "email": "mailto:muradovvusal565@gmail.com", "telephone": "+994702148307", "address": {"@type": "PostalAddress", "addressLocality": "Baku", "addressCountry": "AZ"}, "url": ""}</script>
+  </link>
+  </link>
+</head>
+
+<body>
+  <canvas aria-hidden="true" id="bgParticles"></canvas>
+  <section class="main__section main__section-list">
+    <canvas class="canvasFluid"></canvas>
     <!-- Ana menü -->
     <nav>
       <div class="container">
-        <a href="#home" class="nav-logo">Vusal Muradov</a>
+        <a class="nav-logo" href="#home">Vusal Muradov</a>
         <div class="nav-menu">
-            <ul class="navbar">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="nav-actions">
-                <div class="social-links">
-                    <a href="https://wa.me/994702148307" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.linkedin.com/in/v%C3%BCsal-muradov-22a7862b7/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/Vusal313" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-                </div>
-                <div class="theme-switcher">
-                  <i class="fas fa-sun"></i>
-                  <i class="fas fa-moon"></i>
-                </div>
+          <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="nav-actions">
+            <div class="social-links">
+              <a class="social-icon" href="https://wa.me/994702148307" rel="noopener" target="_blank"><i
+                  class="fab fa-whatsapp"></i></a>
+              <a class="social-icon" href="https://www.linkedin.com/in/v%C3%BCsal-muradov-22a7862b7/" rel="noopener"
+                target="_blank"><i class="fab fa-linkedin"></i></a>
+              <a class="social-icon" href="https://github.com/Vusal313" rel="noopener" target="_blank"><i
+                  class="fab fa-github"></i></a>
             </div>
+            <div class="theme-switcher">
+              <i class="fas fa-sun"></i>
+              <i class="fas fa-moon"></i>
+            </div>
+          </div>
         </div>
-        <div class="menu-toggle">&#9776;</div>
+        <div class="menu-toggle">☰</div>
       </div>
     </nav>
-
     <!-- Profil ve tanıtım -->
     <header id="home">
-      <div class="container header-content">
+      <div class="container header-content" data-parallax="0.10">
         <div class="intro">
-          <h1 id="intro-name">Muradov Vusal</h1>
-          <p id="intro-title">Front-end Developer</p>
+          <h1 data-typing="Muradov Vusal" id="intro-name">Muradov Vusal</h1>
+          <p data-typing="Front-end Developer" id="intro-title">Front-end Developer</p>
+          <div class="hero-actions">
+            <a aria-label="CV yüklə" class="btn btn-outline" download="" href="./src/files/Vusal_Muradov_CV.pdf">
+              <i class="fas fa-file-arrow-down"></i> CV Yüklə
+            </a>
+            <button aria-label="Səsli salamlaşma" class="btn btn-primary" id="speakBtn" type="button">
+              <i class="fas fa-microphone"></i> Salamlaş
+            </button>
+            <button aria-label="Mini AI Chat" class="btn btn-ghost" id="aiChatToggle" type="button">
+              <i class="fas fa-robot"></i> Mini AI Chat
+            </button>
+          </div>
         </div>
       </div>
     </header>
-
     <!-- Hakkında bölümü -->
-    <section id="about" class="reveal">
+    <section class="reveal has-divider" id="about">
       <div class="container">
         <h2>About Me</h2>
         <div class="about-content">
           <div class="profile-pic">
-            <img
-              src="./src/img/WhatsApp Image 2024-12-16 at 22.55.40_3e82f890.jpg"
-              alt="Muradov Vusal"
-            />
+            <img alt="Muradov Vusal" decoding="async" loading="lazy"
+              src="./src/img/WhatsApp Image 2024-12-16 at 22.55.40_3e82f890.jpg" />
           </div>
           <div class="about-text">
             <h3>I'm Vusal, a Front-end Developer based in Baku.</h3>
             <p>
-              I am a passionate developer with a strong foundation in modern web technologies, having completed professional training at leading centers like Digital Dot and Garage Academy. My expertise lies in creating high-quality, visually appealing, and functional web applications using tools like HTML5, CSS3, JavaScript, and React.
+              I am a passionate developer with a strong foundation in modern web technologies, having completed
+              professional training at leading centers like Digital Dot and Garage Academy. My expertise lies in
+              creating high-quality, visually appealing, and functional web applications using tools like HTML5, CSS3,
+              JavaScript, and React.
             </p>
             <p>
-              I am a creative problem-solver with a keen eye for detail and a constant drive to learn and embrace new technologies. I am excited to contribute to innovative projects and collaborate with creative teams to build exceptional digital experiences.
+              I am a creative problem-solver with a keen eye for detail and a constant drive to learn and embrace new
+              technologies. I am excited to contribute to innovative projects and collaborate with creative teams to
+              build exceptional digital experiences.
             </p>
-            <a href="#contact" class="cta-button">Get in Touch</a>
+            <a class="cta-button" href="#contact">Get in Touch</a>
           </div>
         </div>
       </div>
     </section>
-
     <!-- Beceri bölümü -->
-    <section id="skills" class="reveal">
+    <section class="reveal has-divider" id="skills">
       <div class="container">
         <h2>MY SKILLS</h2>
-        <div class="skill-cards">
-          <div class="skill-card"><i class="fab fa-html5"></i><span>HTML5</span></div>
-          <div class="skill-card"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
-          <div class="skill-card"><i class="fab fa-js"></i><span>JavaScript</span></div>
-          <div class="skill-card"><i class="fab fa-react"></i><span>React</span></div>
-          <div class="skill-card"><i class="fab fa-bootstrap"></i><span>Bootstrap</span></div>
-          <div class="skill-card"><i class="fab fa-sass"></i><span>SASS</span></div>
-          <div class="skill-card"><i class="fab fa-figma"></i><span>Figma</span></div>
-          <div class="skill-card"><i class="fas fa-paint-brush"></i><span>Photopea</span></div>
+        <div class="skills-grid">
+          <div class="skill-item tilt-card" data-level="95">
+            <div class="skill-item__top">
+              <i class="fab fa-html5"></i>
+              <div class="skill-item__meta">
+                <span class="skill-item__name">HTML5</span>
+                <span class="skill-item__val">95%</span>
+              </div>
+            </div>
+            <div class="skill-bar__track">
+              <div class="skill-progress" data-level="95"></div>
+            </div>
+          </div>
+          <div class="skill-item tilt-card" data-level="92">
+            <div class="skill-item__top">
+              <i class="fab fa-css3-alt"></i>
+              <div class="skill-item__meta">
+                <span class="skill-item__name">CSS3</span>
+                <span class="skill-item__val">92%</span>
+              </div>
+            </div>
+            <div class="skill-bar__track">
+              <div class="skill-progress" data-level="92"></div>
+            </div>
+          </div>
+          <div class="skill-item tilt-card" data-level="88">
+            <div class="skill-item__top">
+              <i class="fab fa-js"></i>
+              <div class="skill-item__meta">
+                <span class="skill-item__name">JavaScript</span>
+                <span class="skill-item__val">88%</span>
+              </div>
+            </div>
+            <div class="skill-bar__track">
+              <div class="skill-progress" data-level="88"></div>
+            </div>
+          </div>
+          <div class="skill-item tilt-card" data-level="80">
+            <div class="skill-item__top">
+              <i class="fab fa-react"></i>
+              <div class="skill-item__meta">
+                <span class="skill-item__name">React</span>
+                <span class="skill-item__val">80%</span>
+              </div>
+            </div>
+            <div class="skill-bar__track">
+              <div class="skill-progress" data-level="80"></div>
+            </div>
+          </div>
+          <div class="skill-item tilt-card" data-level="85">
+            <div class="skill-item__top">
+              <i class="fab fa-bootstrap"></i>
+              <div class="skill-item__meta">
+                <span class="skill-item__name">Bootstrap</span>
+                <span class="skill-item__val">85%</span>
+              </div>
+            </div>
+            <div class="skill-bar__track">
+              <div class="skill-progress" data-level="85"></div>
+            </div>
+          </div>
+          <div class="skill-item tilt-card" data-level="78">
+            <div class="skill-item__top">
+              <i class="fab fa-sass"></i>
+              <div class="skill-item__meta">
+                <span class="skill-item__name">SASS</span>
+                <span class="skill-item__val">78%</span>
+              </div>
+            </div>
+            <div class="skill-bar__track">
+              <div class="skill-progress" data-level="78"></div>
+            </div>
+          </div>
+          <div class="skill-item tilt-card" data-level="78">
+            <div class="skill-item__top">
+              <i class="fab fa-figma"></i>
+              <div class="skill-item__meta">
+                <span class="skill-item__name">Figma</span>
+                <span class="skill-item__val">78%</span>
+              </div>
+            </div>
+            <div class="skill-bar__track">
+              <div class="skill-progress" data-level="78"></div>
+            </div>
+          </div>
+          <div class="skill-item tilt-card" data-level="75">
+            <div class="skill-item__top">
+              <i class="fas fa-paint-brush"></i>
+              <div class="skill-item__meta">
+                <span class="skill-item__name">Photopea</span>
+                <span class="skill-item__val">75%</span>
+              </div>
+            </div>
+            <div class="skill-bar__track">
+              <div class="skill-progress" data-level="75"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-
     <!-- Projeler bölüm -->
-    <section id="projects" class="reveal">
+    <section class="reveal has-divider" id="projects">
       <div class="container">
         <h2>MY PROJECTS</h2>
         <div class="project-cards">
-          <a href="https://digitaldot-az.netlify.app/" target="_blank">
-            <div class="project-card">
-              <img
-                src="https://digitaldot-az.netlify.app/src/img/SMM.webp"
-                alt="Digital Dot"
-              />
-              <h3>Digital Dot</h3>
+          <a class="project-link"
+            data-desc="Mouse və scroll hərəkətinə reaksiya verən interaktiv kamera-effektli veb layihə."
+            data-images="https://image.thum.io/get/width/1200/https://jovial-churros-65af07.netlify.app/"
+            data-live="https://jovial-churros-65af07.netlify.app/" data-tech="HTML,CSS,JavaScript,Parallax,3D"
+            data-title="Camera Motion Effect" href="https://jovial-churros-65af07.netlify.app/" rel="noopener"
+            target="_blank">
+
+            <div class="project-card tilt-card">
+              <img src="https://image.thum.io/get/width/800/https://jovial-churros-65af07.netlify.app/"
+                alt="Camera Motion Interactive Website" loading="lazy" decoding="async" />
+              <h3>Camera Motion Effect</h3>
             </div>
           </a>
-          <a href="https://shiny-sorbet-6e5a11.netlify.app/" target="_blank">
-            <div class="project-card">
-              <img
-                src="https://themedox.com/mykd/wp-content/uploads/2023/10/gallery04.jpg"
-                alt="Gallery Project"
-              />
+          <a class="project-link"
+            data-desc="Modern UI/UX dizaynlı interaktiv veb layihə. Smooth animasiyalar, responsiv struktur və vizual effektlər istifadə olunub."
+            data-images="https://image.thum.io/get/width/1200/https://gorgeous-maamoul-606eb8.netlify.app/"
+            data-live="https://gorgeous-maamoul-606eb8.netlify.app/" data-tech="HTML,CSS,JavaScript"
+            data-title="Modern Interactive Website" href="https://gorgeous-maamoul-606eb8.netlify.app/" rel="noopener"
+            target="_blank">
+
+            <div class="project-card tilt-card">
+              <img src="https://image.thum.io/get/width/800/https://gorgeous-maamoul-606eb8.netlify.app/"
+                alt="Modern Interactive Website Preview" loading="lazy" decoding="async" />
+              <h3>Aulbayt Azerbaycan</h3>
+            </div>
+          </a>
+
+          <a class="project-link"
+            data-desc="Rolling/3D gallery təcrübəsi: full-screen preview, smooth transitions və interaktiv UI."
+            data-images="https://themedox.com/mykd/wp-content/uploads/2023/10/gallery04.jpg,https://themedox.com/mykd/wp-content/uploads/2023/10/gallery04.jpg,https://themedox.com/mykd/wp-content/uploads/2023/10/gallery04.jpg"
+            data-live="https://shiny-sorbet-6e5a11.netlify.app/" data-tech="HTML,CSS,JavaScript"
+            data-title="Gallery Project" href="https://shiny-sorbet-6e5a11.netlify.app/" rel="noopener" target="_blank">
+            <div class="project-card tilt-card">
+              <img alt="Gallery Project" decoding="async" loading="lazy"
+                src="https://themedox.com/mykd/wp-content/uploads/2023/10/gallery04.jpg" />
               <h3>Gallery Project</h3>
             </div>
           </a>
-          <a href="https://home-444.netlify.app/" target="_blank">
-            <div class="project-card">
-              <img
-                src="https://xhibiter-reactjs.ibthemespro.com/img/products/item_3.gif"
-                alt="E-commerce Site"
-              />
+          <a class="project-link"
+            data-desc="E-commerce dizaynı: məhsul grid, UI komponentləri və mobil-friendly quruluş."
+            data-images="https://xhibiter-reactjs.ibthemespro.com/img/products/item_3.gif,https://xhibiter-reactjs.ibthemespro.com/img/products/item_3.gif,https://xhibiter-reactjs.ibthemespro.com/img/products/item_3.gif"
+            data-live="https://home-444.netlify.app/" data-tech="HTML,CSS,JavaScript" data-title="E-commerce Site"
+            href="https://home-444.netlify.app/" rel="noopener" target="_blank">
+            <div class="project-card tilt-card">
+              <img alt="E-commerce Site" decoding="async" loading="lazy"
+                src="https://xhibiter-reactjs.ibthemespro.com/img/products/item_3.gif" />
               <h3>E-commerce Site</h3>
             </div>
           </a>
-          <a href="https://site-city.netlify.app/" target="_blank">
-            <div class="project-card">
-              <img
-                src="https://site-city.netlify.app/image/masa.jpg"
-                alt="Site City"
-              />
+          <a class="project-link"
+            data-desc="Şəhər/daşınmaz əmlak üslubunda landing page: premium vizuallar, sekmələr və animasiyalar."
+            data-images="https://site-city.netlify.app/image/masa.jpg,https://site-city.netlify.app/image/masa.jpg,https://site-city.netlify.app/image/masa.jpg"
+            data-live="https://site-city.netlify.app/" data-tech="HTML,CSS,JavaScript" data-title="Site City"
+            href="https://site-city.netlify.app/" rel="noopener" target="_blank">
+            <div class="project-card tilt-card">
+              <img alt="Site City" decoding="async" loading="lazy" src="https://site-city.netlify.app/image/masa.jpg" />
               <h3>Site City</h3>
             </div>
           </a>
-          <a
-            href="https://superb-buttercream-6993cb.netlify.app/"
-            target="_blank"
-          >
-            <div class="project-card">
-              <img
-                src="https://superb-buttercream-6993cb.netlify.app/Src/Img/Electronics.jpg"
-                alt="Electronics Store"
-              />
+          <a class="project-link"
+            data-desc="Elektronika mağazası UI: kateqoriyalar, məhsul kartları, modern grid və hover effektlər."
+            data-images="https://superb-buttercream-6993cb.netlify.app/Src/Img/Electronics.jpg,https://superb-buttercream-6993cb.netlify.app/Src/Img/Electronics.jpg,https://superb-buttercream-6993cb.netlify.app/Src/Img/Electronics.jpg"
+            data-live="https://superb-buttercream-6993cb.netlify.app/" data-tech="HTML,CSS,JavaScript"
+            data-title="Electronics Store" href="https://superb-buttercream-6993cb.netlify.app/" rel="noopener"
+            target="_blank">
+            <div class="project-card tilt-card">
+              <img alt="Electronics Store" decoding="async" loading="lazy"
+                src="https://superb-buttercream-6993cb.netlify.app/Src/Img/Electronics.jpg" />
               <h3>Electronics Store</h3>
             </div>
           </a>
-          <a href="https://regal-pothos-74d59c.netlify.app/" target="_blank">
-            <div class="project-card">
-              <img
-                src="https://regal-pothos-74d59c.netlify.app/src/image/client_02.jpg"
-                alt="Client Showcase"
-              />
+          <a class="project-link"
+            data-desc="Müştəri showcase səhifəsi: portfoliolar, slider hissələri və responsive layout."
+            data-images="https://regal-pothos-74d59c.netlify.app/src/image/client_02.jpg,https://regal-pothos-74d59c.netlify.app/src/image/client_02.jpg,https://regal-pothos-74d59c.netlify.app/src/image/client_02.jpg"
+            data-live="https://regal-pothos-74d59c.netlify.app/" data-tech="HTML,CSS,JavaScript"
+            data-title="Client Showcase" href="https://regal-pothos-74d59c.netlify.app/" rel="noopener" target="_blank">
+            <div class="project-card tilt-card">
+              <img alt="Client Showcase" decoding="async" loading="lazy"
+                src="https://regal-pothos-74d59c.netlify.app/src/image/client_02.jpg" />
               <h3>Client Showcase</h3>
             </div>
           </a>
         </div>
       </div>
     </section>
-
     <!-- İletişim bölümü -->
-    <section id="contact" class="reveal">
+    <section class="reveal has-divider" id="contact">
       <div class="container">
         <h2>Get In Touch</h2>
         <div class="contact-content">
-            <div class="contact-info">
-                <h3>Let's talk!</h3>
-                <p>If you have any questions or want to collaborate, feel free to reach out. I'm always open to discussing new projects and creative ideas.</p>
-                <p>
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:muradovvusal565@gmail.com">muradovvusal565@gmail.com</a>
-                </p>
-                <p>
-                    <i class="fas fa-phone"></i>
-                    <a href="tel:+994702148307">+994 70 214 83 07</a>
-                </p>
-            </div>
-            <form class="contact-form" name="contact" data-netlify="true">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit" class="cta-button">Send Message</button>
-            </form>
+          <div class="contact-info">
+            <h3>Let's talk!</h3>
+            <p>If you have any questions or want to collaborate, feel free to reach out. I'm always open to discussing
+              new projects and creative ideas.</p>
+            <p>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:muradovvusal565@gmail.com">muradovvusal565@gmail.com</a>
+            </p>
+            <p>
+              <i class="fas fa-phone"></i>
+              <a href="tel:+994702148307">+994 70 214 83 07</a>
+            </p>
+          </div>
+          <form class="contact-form" data-netlify="true" name="contact">
+            <input name="form-name" type="hidden" value="contact" />
+            <input name="name" id="contactName" placeholder="Your Name" required minlength="2"="" type="text" />
+            <input name="email" id="contactEmail" placeholder="Your Email" required="" type="email" />
+            <textarea name="message" placeholder="Your Message" required="" rows="5"></textarea>
+            <button class="cta-button" type="submit">Send Message</button>
+          </form>
         </div>
       </div>
     </section>
-    
     <!-- Footer -->
     <footer>
       <div class="container">
-        <p>&copy; 2025 Muradov Vusal. Bütün hüquqlar qorunur.</p>
+        <p>© 2025 Muradov Vusal. Bütün hüquqlar qorunur.</p>
       </div>
     </footer>
   </section>
+  <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+  <script defer="" src="./src/js/app.js"></script>
+  <!-- Neon cursor -->
+  <div aria-hidden="true" id="neonCursor"></div>
+  <!-- Page loader -->
+  <div aria-hidden="true" id="pageLoader">
+    <div aria-label="Səhifə yüklənir" aria-live="polite" class="loader-card" role="status">
+      <div aria-hidden="true" class="loader-logo">
+        <div class="logo-ring"></div>
+        <div class="logo-core">V</div>
+      </div>
+      <div class="loader-title">Loading…</div>
+      <div class="loader-sub">Portfolio hazırlanır</div>
+      <div aria-hidden="true" class="loader-bar"><span class="loader-bar-fill"></span></div>
+      <div class="loader-meta">
+        <div class="loader-percent">0%</div>
+        <button aria-label="Yükləməni keç" class="loader-skip" type="button">Keç</button>
+      </div>
+    </div>
+  </div>
+  <!-- Mini AI Chat -->
+  <div aria-hidden="true" class="ai-chat" id="aiChat">
+    <div class="ai-chat__header">
+      <div class="ai-chat__title">
+        <i class="fas fa-robot"></i>
+        <span>Mini AI Chat</span>
+      </div>
+      <button aria-label="Bağla" class="ai-chat__close" id="aiChatClose" type="button">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div aria-live="polite" class="ai-chat__messages" id="aiChatMessages" role="log"></div>
+    <form autocomplete="off" class="ai-chat__form" id="aiChatForm">
+      <input aria-label="Mesaj yaz" id="aiChatInput" placeholder="Məs: Bacarıqların nədir?" type="text">
+      <button aria-label="Göndər" class="ai-chat__send" type="submit">
+        <i class="fas fa-paper-plane"></i>
+      </button>
+      </input>
+    </form>
+    <div class="ai-chat__quick">
+      <button class="ai-chip" data-q="Bacarıqların nədir?" type="button">Bacarıqlar</button>
+      <button class="ai-chip" data-q="Layihələrin hansılardır?" type="button">Layihələr</button>
+      <button class="ai-chip" data-q="Əlaqə məlumatların?" type="button">Əlaqə</button>
+      <button class="ai-chip" data-q="Səni niyə işə götürsünlər?" type="button">Niyə sən?</button>
+    </div>
+  </div>
+  <!-- Project Gallery Modal -->
+  <div id="projectModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project details">
+    <div class="modal__backdrop" data-close="1"></div>
+    <div class="modal__panel modal__panel--gallery" role="document">
+      <button class="modal__close" type="button" aria-label="Bağla" data-close="1"><i class="fas fa-times"></i></button>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-    <script src="./src/js/app.js"></script>
-  </body>
+      <div class="modal__grid">
+        <div class="pm-media">
+          <div class="pm-media__frame">
+            <button class="pm-nav pm-nav--prev" type="button" aria-label="Əvvəlki şəkil" data-pm-prev="1"><i
+                class="fas fa-chevron-left"></i></button>
+            <img id="pmMain" alt="Project image" loading="lazy" decoding="async" />
+            <button class="pm-nav pm-nav--next" type="button" aria-label="Növbəti şəkil" data-pm-next="1"><i
+                class="fas fa-chevron-right"></i></button>
+          </div>
+          <div id="pmThumbs" class="pm-thumbs" aria-label="Project images"></div>
+        </div>
+
+        <div class="pm-info">
+          <div class="pm-title" id="pmTitle">Project</div>
+          <p class="pm-desc" id="pmDesc"></p>
+
+          <div class="pm-tech" id="pmTech"></div>
+
+          <div class="pm-actions">
+            <a id="pmLive" class="btn btn-primary" href="#" target="_blank" rel="noopener">Live site</a>
+            <button id="pmCopy" class="btn btn-ghost" type="button"><i class="far fa-copy"></i> Linki kopyala</button>
+          </div>
+
+          <div class="pm-note">
+            <i class="fas fa-bolt"></i> Tip: şəkilləri klaviaturada <b>←</b>/<b>→</b> ilə dəyişə bilərsən.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+</body>
+
 </html>
